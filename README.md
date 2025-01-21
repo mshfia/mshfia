@@ -3,15 +3,15 @@
     <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!+👋;+I'm+Mahruus!;" />
 </h1>
 
-<h3 align="center">I have a solid understanding of Java and am committed to furthering my knowledge.</h3>
+<h3 align="center">I am a student currently learning to develop my website, focusing on PHP, MySQL, and other technologies.</h3>
 
 <br/>
 
 <div align="center">
  
- 🔭 I’m currently seeking an internship to gain valuable experience. I have skills in Java and I'm eager to apply them in a professional setting.
+ 🔭 I’m currently seeking an internship to gain valuable experience. I have skills in PHP and I'm eager to apply them in a professional setting.
  
- 🌱 I’m currently learning **Spring Boot**
+ 🌱 I’m currently learning **Laravel**
 
 💬 Ask me about **...**
 
@@ -19,11 +19,11 @@
  </div>
  
 <div align="center"> 
-  <a href="mailto:adilinan72@gmail.com">
+  <a href="mailto:mehmedmahrus@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-333333?style=for-the-badge&logo=gmail&logoColor=green" />
   </a>
     
-  <a href="https://www.linkedin.com/in/mshfia/" target="_blank">
+  <a href="https://www.linkedin.com/in/shofi-a-092785318/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
 </div>

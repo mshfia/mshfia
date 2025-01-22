@@ -42,7 +42,8 @@
 <div align="center">
   <h2>🐍 My Contributions 🐍</h2>
   <br>
-  <img alt="snake eating my contributions" src="https://raw.githubusercontent.com/mshfia/mshfia/output/github-contribution-grid-snake.svg" />
+  <!-- Link tetap sama dengan file output dari main.yml -->
+  <img alt="snake eating my contributions" src="https://github.com/mshfia/mshfia/blob/output/github-contribution-grid-snake.svg" />
   <br/><br/><br/>
 </div>
 

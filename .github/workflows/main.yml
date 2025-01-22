@@ -2,23 +2,32 @@ name: Generate Snake Animation
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # Run daily at midnight
+    - cron: "0 0 * * *"  # Jalankan setiap hari pada tengah malam
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   generate:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository content
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Generate Snake Animation
-        uses: Platane/snk@v2.0.3
+        uses: Platane/snk@v3
         with:
-          github_user_name: ${{ github.repository_owner }}  # This will use the owner of the repository
+          github_user_name: ${{ github.repository_owner }}  # Menggunakan username dari repository
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Gunakan GitHub token untuk autentikasi
 
       - name: Push Snake Animation to the output branch
-        uses: peaceiris/actions-gh-pages@v3
+        uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          target_branch: output
+          build_dir: dist
+          commit_message: Update snake animations
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Gunakan default GITHUB_TOKEN untuk autentikasi

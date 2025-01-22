@@ -1,25 +1,23 @@
 name: Generate Snake Animation
 
 on:
-  schedule: # Menjalankan pekerjaan setiap 6 jam
-    - cron: "0 */6 * * *"
+  schedule:
+    - cron: "0 0 * * *"  # Run daily at midnight
   workflow_dispatch:
 
 jobs:
   generate:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: Checkout repository content
         uses: actions/checkout@v2
 
-      - name: Generate snake game from contributions
-        uses: Platane/snk@v2
+      - name: Generate Snake Animation
+        uses: Platane/snk@v2.0.3
         with:
-          github_user_name: mshfia
-          svg_out_path: dist/github-contribution-grid-snake.svg
+          github_user_name: ${{ github.repository_owner }}  # This will use the owner of the repository
 
-      - name: Upload to GitHub Pages
+      - name: Push Snake Animation to the output branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

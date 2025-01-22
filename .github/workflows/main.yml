@@ -16,6 +16,9 @@ jobs:
       - name: Checkout repository content
         uses: actions/checkout@v3
 
+      - name: Create 'dist' directory
+        run: mkdir -p dist  # Buat direktori dist jika belum ada
+
       - name: Generate Snake Animation
         uses: Platane/snk@v3
         with:
@@ -23,11 +26,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Gunakan GitHub token untuk autentikasi
 
+      - name: Move output files to 'dist' directory
+        run: mv *.svg dist/  # Pindahkan file output ke direktori dist
+
       - name: Push Snake Animation to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
-          build_dir: dist
+          build_dir: dist  # Tentukan direktori dist sebagai build_dir
           commit_message: Update snake animations
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Gunakan default GITHUB_TOKEN untuk autentikasi
